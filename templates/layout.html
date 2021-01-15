@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts App Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'main.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h2 class="header__title">
+            Contacts App Flask
+        </h2>
+    </header>
+
+    <div class="container">
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+</html>

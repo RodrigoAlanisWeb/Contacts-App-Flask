@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #555;
+    padding: 20px;
+    color: white;
+    font-family: sans-serif;
+    .header__title{
+        font-weight: 300;
+    }
+}
+
+.container{
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    .container__form{
+        width: 45%;
+    .alert{
+        background-color: rgb(0, 151, 0);
+        padding: 10px;
+        color: white;
+        border-radius: 3px;
+        margin-bottom: 10px;
+    }
+    form{
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0px 0px 10px #ccc;
+        input{
+            padding: 5px;
+            outline: none;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        button{
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #555;
+            width: 100%;
+            color: white;
+            border: none;
+            font-size: 20px;
+            font-weight: lighter;
+            border-radius: 5px;
+        }
+
+        label{
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        .form__title{
+            font-size: 25px;
+            font-weight: 300;
+            margin: 10px 0px;
+        }
+    }
+    }
+
+    table{
+        width: 45%;
+        border-collapse: collapse;
+        box-shadow: 0px 0px 10px #ccc;
+        td{
+            border-bottom: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            .button{
+                display: block;
+                padding: 5px;
+                border-radius: 3px;
+                width: 80px;
+                color: white;
+                text-decoration: none;
+                margin-bottom: 10px;
+            }
+
+            .delete{
+                background-color: red;
+            }
+
+            .edit{
+                background-color: green;
+            }
+        }
+        tbody{
+            td{
+                border-left: 1px solid #ccc;
+            }
+        }
+    }
+}

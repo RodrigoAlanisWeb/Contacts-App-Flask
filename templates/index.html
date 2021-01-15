@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container__form">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for msg in messages %}
+
+    <p class="alert">{{ msg }}</p>
+
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <form action="/add_contact" method="POST">
+
+        <h2 class="form__title">
+            Add Contact
+        </h2>
+
+        <label>FullName: </label>
+        <input type="text" name="fullname" placeholder="Fullname">
+        <label>Phone: </label>
+        <input type="text" name="phone" placeholder="Phone">
+        <label>Email: </label>
+        <input type="email" name="email" placeholder="Email">
+        <button type="submit">
+            Save
+        </button>
+
+    </form>
+
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <td>Fullname</td>
+            <td>Phone</td>
+            <td>Email</td>
+            <td>Options</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in contacts %}
+        <tr>
+            <td>
+                {{ c.1 }}
+            </td>
+            <td>
+                {{ c.2 }}
+            </td>
+            <td>
+                {{ c.3 }}
+            </td>
+            <td>
+                <a href="/edit/{{ c.0 }}" class="button edit">Edit</a>
+                <a href="/delete/{{ c.0 }}" class="button delete">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container__form">
+    <form action='/update/{{ contact.0 }}' method="POST">
+
+        <h2 class="form__title">
+            Edit Contact
+        </h2>
+    
+        <label>FullName: </label>
+        <input type="text" name="fullname" placeholder="Fullname" value="{{ contact.1 }}">
+        <label>Phone: </label>
+        <input type="text" name="phone" placeholder="Phone" value="{{ contact.2 }}">
+        <label>Email: </label>
+        <input type="email" name="email" placeholder="Email" value="{{ contact.3 }}">
+    
+        <button type="submit">
+            Save
+        </button>
+    
+    </form>
+</div>
+
+{% endblock %}
